@@ -26,16 +26,29 @@ return `<div class="wrap">
 }
 let pokemonsHtml = '';
 
-for (let i = 0; i < POKEMONS.length; i++) {
-  pokemonsHtml += getPOKEMONS(POKEMONS[i]);
+let pokemosArray = POKEMONS.sort(function(primero, segundo){
+  if(primero.name < segundo.name){
+    return -1
+  }
+  if(segundo.name < primero.name){
+    return 1
+  }
+  return 0;
+});
+
+for (let i = 0; i < pokemosArray.length; i++) {
+  pokemonsHtml += getPOKEMONS(pokemosArray[i]);
 }
 const pokeData = document.getElementById('info');
 pokeData.innerHTML = pokemonsHtml;
 
 
-//onst selectAZ = document.getElementById("orderABC");
-//selectAZ.addEventListener("change", () => {
- // document.getElementById('info').innerHTML = filterAZ();
+
+
+
+//llamado Alfabéticamente 
+// selectAZ.addEventListener('change', () => {
+ //document.getElementById('info').innerHTML = filterAZ();
 //});
 
 //const filterAZfunction = filterAZ();
