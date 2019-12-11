@@ -8,79 +8,94 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-      <div id="root"></div>
-      <div class="contenedor">
+      <div class="container">
         <header>
           <div class="logo">
-            <img src="img/PokeDesk.png" alt="LogoPokédesk">
-            <p>Es tu escritorio de bolsillo para conocer las caracteristicas de cada pokémon.</p>
+            <img class="logoPoke" src="img/PokeDesk.png" alt="LogoPokédesk">
+            <p>Tu escritorio de bolsillo para conocer las caracteristicas de cada pokémon</p>
           </div>
 
           <form action="">
             <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar por nombre o número">
           </form>
           
-          <div>
-            <ul class="nav">
-              <li><a href="#" class="activo">Todos</a></li>
-              <li><a href="">Tipo</a>
-               <ul>
-                 <li><a href="">Bug</a></li>
-                 <li><a href="">Dragón</a></li>
-                 <li><a href="">Electric</a></li>
-                 <li><a href="">Fighting</a></li>
-                 <li><a href="">Fire</a></li>
-                 <li><a href="">Flying</a></li>
-                 <li><a href="">Ghost</a></li>
-                 <li><a href="">Grass</a></li>
-                 <li><a href="">Ground</a></li>
-                 <li><a href="">Ice</a></li>
-                 <li><a href="">Normal</a></li>
-                 <li><a href="">Poison</a></li>
-                 <li><a href="">Pshychic</a></li>
-                 <li><a href="">Rock</a></li>
-                 <li><a href="">Water</a></li>
-                </ul>
-              </li>
+          <nav class="nav">
+            <div class="column">
+            <input class="boton" type="button" value="Todos" id="showAll">
+            </div>
+
+            <div class="column">
+              <label class="labelTitle"><b>Tipo:</b>
+                <select class="filterType" name="type" id="filterType">
+                  <option value="selection" disabled>Selecciona</option>
+                  <option value="Bug">Bug</option>
+                  <option value="Dark">Dark</option>
+                  <option value="Dragon">Dragon</option>
+                  <option value="Electric">Electric</option>
+                  <option value="Fairy">Fairy</option>
+                  <option value="Fighting">Fighting</option>
+                  <option value="Fire">Fire</option>
+                  <option value="Flying">Flying</option>
+                  <option value="Ghost">Ghost</option>
+                  <option value="Grass">Grass</option>
+                  <option value="Ground">Ground</option>
+                  <option value="Ice">Ice</option>
+                  <option value="Normal">Normal</option>
+                  <option value="Poison">Poison</option>
+                  <option value="Psychic">Psychic</option>
+                  <option value="Rock">Rock</option>
+                  <option value="Steal">Steel</option>
+                  <option value="Water">Water</option>
+                </select>
+              </label>
+            </div>
      
-           <li><a href="">Debilidad</a>
-           <ul>
-             <li><a href="">Bug</a></li>
-             <li><a href="">Dragón</a></li>
-             <li><a href="">Electric</a></li>
-             <li><a href="">Fighting</a></li>
-             <li><a href="">Fire</a></li>
-             <li><a href="">Flying</a></li>
-             <li><a href="">Ghost</a></li>
-             <li><a href="">Grass</a></li>
-             <li><a href="">Ground</a></li>
-             <li><a href="">Ice</a></li>
-             <li><a href="">Normal</a></li>
-             <li><a href="">Poison</a></li>
-             <li><a href="">Pshychic</a></li>
-             <li><a href="">Rock</a></li>
-             <li><a href="">Water</a></li>
-           </ul>
-         </li>
-         <li><a href="">Alfabéticamente</a>
-             <ul> 
-               <li><a href=""> de la A-Z</a></li>
-               <li><a href=""> de la Z-A</a></li>
-           </ul>
-         </li>
-       </ul>
-     </div>
-        </header>
+            <div class="column">
+              <label class="labelTitle"><b>Debilidad</b>
+                <select class="filterWeakness" name="weakness" id="filterWeakness">
+                  <option value="selection" disabled>Selecciona</option>
+                  <option value="Bug">Bug</option>
+                  <option value="Dark">Dark</option>
+                  <option value="Dragon">Dragon</option>
+                  <option value="Electric">Electric</option>
+                  <option value="Fairy">Fairy</option>
+                  <option value="Fighting">Fighting</option>
+                  <option value="Fire">Fire</option>
+                  <option value="Flying">Flying</option>
+                  <option value="Ghost">Ghost</option>
+                  <option value="Grass">Grass</option>
+                  <option value="Ground">Ground</option>
+                  <option value="Ice">Ice</option>
+                  <option value="Normal">Normal</option>
+                  <option value="Poison">Poison</option>
+                  <option value="Psychic">Psychic</option>
+                  <option value="Rock">Rock</option>
+                  <option value="Steal">Steel</option>
+                  <option value="Water">Water</option>
+                </select>
+              </label>
+            </div>
 
-      <section id="info">
-        <p>info</p>
-      </section>
+            <div class="column">
+              <label class="labelTitle"><b>Alfabeto</b>
+                <select class="filterOrder" id="orderABC">
+                  <option value="selection">Selecciona</option>
+                  <option id="az" sortby="name" orderby="asc" value="A">A - Z</option>
+                </select>
+              </label>
+            </div>
+          </header>
 
-        <footer class="contenedor">
-          <div class="creado-por">
-            <p>Sitio diseñado por Camila Rojas & Tamara Muñoz</p>
-          </div>
-        </footer>
+
+          <section id="info">
+            <p>INFO</p>
+          </section>
+
+          <footer class="pie">
+            <div class="creado-por">
+              <p>Sitio diseñado por Camila Rojas & Tamara Muñoz</p>
+            </div>
+          </footer>
       </div>
   
       <script type="module" src="main.js"></script>
