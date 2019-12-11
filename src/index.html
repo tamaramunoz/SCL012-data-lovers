@@ -25,9 +25,13 @@
             </div>
 
             <div class="column">
+              <input class="boton" type="button" value="Buscar" id="search-name">
+            </div>
+
+            <div class="column">
               <label class="labelTitle"><b>Tipo:</b>
-                <select class="filterType" name="type" id="filterType">
-                  <option value="selection" disabled>Selecciona</option>
+                <select class="filterType" name="type" id="filterType" onchange="filterType()">
+                  <option value="selection">Selecciona</option>
                   <option value="Bug">Bug</option>
                   <option value="Dark">Dark</option>
                   <option value="Dragon">Dragon</option>
@@ -53,7 +57,7 @@
             <div class="column">
               <label class="labelTitle"><b>Debilidad</b>
                 <select class="filterWeakness" name="weakness" id="filterWeakness">
-                  <option value="selection" disabled>Selecciona</option>
+                  <option value="selection">Selecciona</option>
                   <option value="Bug">Bug</option>
                   <option value="Dark">Dark</option>
                   <option value="Dragon">Dragon</option>

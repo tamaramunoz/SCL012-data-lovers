@@ -5,50 +5,24 @@
 //export const example = () => {
  // return 'example';
 //};
-import POKEMON from './data/pokemon/pokemon.js'
+//import POKEMON from './data/pokemon/pokemon.js';
 
 
 //function para ordenar alfabeticamente A-Z
-export function filterAZ() {
-  let pokeInfo = POKEMON;
-  let mapeando = pokeInfo.map(a => a > b )
-  let ordenando = mapeando.sort((a,b) => a[name].localeCompare(b[name]))
-  return ordenando;
+export function filterType(elem, kind) {
+  const pokeFilter = elem.filter((pkm) => (pkm.type === kind));
+  console.log(pokeFilter);
+  return pokeFilter;
 };
 
 
-  
+
 
 
 
 
 
 /*
-//mostrando todos los pokemones en pantalla
-export function showingAll() {
-  let result = " ";
-
-  for (let i = 0; i < POKEMON.length; i++) {
-    result += POKEMON;
-
-    console.log(POKEMON.type);
-    return result;
-
-      
-    //console.log(POKEMON.name)
-     
-      };
- 
-  };
-
-
-
-
-
-
-
-
-
 //function para ordenar alfabeticamente A-Z
 export function filterAZ() {
   let pokeInfo = POKEMON;
@@ -56,6 +30,14 @@ export function filterAZ() {
   let ordenando = mapeando.sort()
   return ordenando;
 };
+
+export function filterAZ() {
+  let pokeInfo = POKEMON;
+  let mapeando = pokeInfo.map(a => a > b )
+  let ordenando = mapeando.sort((a,b) => a[name].localeCompare(b[name]))
+  return ordenando;
+};
+*/
 
 
 
