@@ -139,7 +139,6 @@ footer .creado-por {
 	}
 	.front{
 	text-align: center;
-	color: #fbc30e;
 	font-size: 18px;
 	}
 		
@@ -148,11 +147,14 @@ footer .creado-por {
 	padding-bottom: 8px ;
 	font-weight: bold;
 	background: #2a4381;
+	color: #fbc30e;
 	border-radius: 20px;
 	margin: 18px;
 }
 .front > p {
 font-weight: bold;	
+margin-top: 40px ;
+color: #26394d;
 }
 	
 .imagen{
