@@ -1,9 +1,6 @@
 import POKEMONS from './data/pokemon/pokemon.js'
 
- //console.log(POKEMON);
- 
- //console.log(POKEMON[5]);
-
+//console.log(POKEMONS);
  console.log("hola");
 
  //mostrando todos los pokemones en su tarjeta
@@ -29,27 +26,15 @@ return `<div class="wrap">
          </div>
      </div>`;
 }
-let pokemonsHtml = '';
+//funcion todos por id
+let pokemonsHtml = ""; 
 
-let pokemosArray = POKEMONS.sort(function(primero, segundo){
-  if(primero.name < segundo.name){
-    return -1
-  }
-  if(segundo.name < primero.name){
-    return 1
-  }
-  return 0;
-});
+for (let i = 0; i < POKEMONS.length; i++) {
+  pokemonsHtml += getPOKEMONS(POKEMONS[i])
 
-
-for (let i = 0; i < pokemosArray.length; i++) {
-  pokemonsHtml += getPOKEMONS(pokemosArray[i]);
-}
-const pokeData = document.getElementById('info');
-pokeData.innerHTML = pokemonsHtml;
-
-
-
+  let pokeData = document.getElementById("info");
+  pokeData.innerHTML = pokemonsHtml;
+};
 
 
 //filtrando por tipo
@@ -58,25 +43,17 @@ const filtering = document.getElementById("filterType");
 
 filtering.addEventListener("change", function() {
   //contendra el nombre del tipo seleccionado
-  const takingType = document.getElementById("filterType").value;
-  const resultType = filterType(takingType);
-  document.getElementById("info").innerHTML += getPOKEMONS(resultType);
- 
+  const selectingType = document.getElementById("filterType").value;
+  //dentro de la funcion integramos el tipo seleccionado
+  const resultType = filterType(selectingType);
+  const containerInfo = document.getElementById("info");
+  containerInfo.innerHTML = "";
+
+
+  for (let i = 0; i < resultType.length; i++) {
+    containerInfo.innerHTML += `${getPOKEMONS(resultType[i])}`;
+  }
 });
-
-
-/*
-
- //filtrando por alfabeto de Z - A
- import {filterZA} from './data.js';
-const selectZA = document.getElementById("orderABC");
- selectZA.addEventListener("change", () => {
-   //let showZA= selectZA.options[selectZA.selectedIndex].text;
-   document.getElementById("info").innerHTML = filterZA();
-});
-
-document.getElementById("info").innerHTML += getPOKEMONS(pressingType);
-*/
 
 
 //filtrando al pokemon por nombre (en el buscador)
@@ -99,86 +76,7 @@ btnSearch.addEventListener('click', function() {
 
 });
 
-
-
-
-
-
- /*
-//mostrando todos los pokemones un una tarjeta
-function card(POKEMONParam) {
-  let cardPkm =
-`<div class="wrap">
-        <div class="card-wrap">
-            <div class="card">
-            <div class="front">
-             <h4>${POKEMONParam.name}</h4>
-             <img class="imagen" src="${POKEMONParam.img}" alt="imagen POKEMONParam">
-             <p>${POKEMONParam.num}</p>
-            </div>
-           <div class="back"> 
-           <lo> 
-              <li>Type: ${POKEMONParam.type} </li>  
-              <li>Height: ${POKEMONParam.height}</li>
-              <li>Weight : ${POKEMONParam.weight} </li>
-              <li>Weaknesses: ${POKEMONParam.weaknesses}</li>
-            </lo>
-           </div>
-         </div>
-         </div>
-     </div>`;
-  let placeCard = document.createElement('div');
-      placeCard.innerHTML = cardPkm;
-      document.body.appendChild(placeCard);
-
-};
-
-
-import {filterType} from './data.js';
-const selectABC = document.getElementById("filterType");
-
-selectABC.addEventListener("change", () => {
-  const pressAZ = selectABC.selectedIndex;
-  const takingAZ = selectABC.children[pressAZ].innerHTML.trim();
-  const result = filterType(takingAZ);
-  card(result);
-})
-*/
-
-/*
-import {filterType} from './data.js';
-const filtering = document.getElementById("filterType");
-
-filtering.addEventListener("change", () => {
-  const takingType = filtering.selectedIndex;
-  const pressingType = filtering.children[takingType].innerHTML.trim();
-  const result = filterType(pressingType);
-  getPOKEMONS(result);
-})
-*/
-
-
-/* 
-import {filterType} from './data.js';
- const selectType = document.getElementById("filterType");
-  selectType.addEventListener("change", () =>{
-    let condition = selectType.options[selectType.selectedIndex].text;
-    document.getElementById("info").innerHTML = filterType();
-  });
-*/
-
-
-
-
-/*
-//funcion todos
-let pokemonsHtml = ""; 
-
-for (let i = 0; i < POKEMON.length; i++) {
-  pokemonsHtml += getPOKEMON(POKEMON[i])
-  let pokeData = document.getElementById("info");
-  pokeData.innerHTML = pokemonsHtml;
-}
-*/
-
-
+//WORKING "TODOS" BTN 
+document.getElementById('showAll').addEventListener('click', () =>{
+  location.reload();
+});
