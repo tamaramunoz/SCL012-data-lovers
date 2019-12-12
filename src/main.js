@@ -1,7 +1,4 @@
-import POKEMONS from './data/pokemon/pokemon.js'
-
-//console.log(POKEMONS);
- console.log("hola");
+import POKEMONS from './data/pokemon/pokemon.js';
 
  //mostrando todos los pokemones en su tarjeta
 function getPOKEMONS(POKEMONParam) {
