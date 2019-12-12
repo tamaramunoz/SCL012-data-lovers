@@ -16,26 +16,24 @@
           </div>
 
           <form action="">
+
             <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar por nombre tu Pokemon">
+
           </form>
           
           <nav class="nav">
             <div class="column">
             <input class="boton" type="button" value="Todos" id="showAll">
             </div>
-            <div class="column">
-              <input id="search-name"class="boton" type="button" value="Buscar">
-              
-            </div>
 
             <div class="column">
-              <input class="boton" type="button" value="Ordenar: Z - A" id="orderZA">
+              <input class="boton" type="button" value="Buscar" id="search-name">
             </div>
 
             <div class="column">
               <label class="labelTitle"><b>Tipo:</b>
                 <select class="filterType" name="type" id="filterType">
-                  <option value="selection" disabled>Selecciona</option>
+                  <option value="selection">Selecciona</option>
                   <option value="Bug">Bug</option>
                   <option value="Dark">Dark</option>
                   <option value="Dragon">Dragon</option>
@@ -61,7 +59,7 @@
             <div class="column">
               <label class="labelTitle"><b>Debilidad</b>
                 <select class="filterWeakness" name="weakness" id="filterWeakness">
-                  <option value="selection" disabled>Selecciona</option>
+                  <option value="selection">Selecciona</option>
                   <option value="Bug">Bug</option>
                   <option value="Dark">Dark</option>
                   <option value="Dragon">Dragon</option>
@@ -83,8 +81,15 @@
                 </select>
               </label>
             </div>
-                  
-                   
+
+            <div class="column">
+              <label class="labelTitle"><b>Alfabeto</b>
+                <select class="filterOrder" id="orderABC">
+                  <option value="selection">Selecciona</option>
+                  <option id="az" sortby="name" orderby="asc" value="A">A - Z</option>
+                </select>
+              </label>
+            </div>
           </header>
 
 

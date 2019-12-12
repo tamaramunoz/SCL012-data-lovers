@@ -59,7 +59,6 @@ header .barra-busqueda {
 	text-align: center;
 	font-size: 16px;
 	margin-bottom: 20px;
-
 }
 
 header .nav {
@@ -152,6 +151,16 @@ footer .creado-por {
 	border-radius: 20px;
 	margin: 18px;
 }
+
+	color: #fbc30e;
+	border-radius: 20px;
+	margin: 18px;
+}
+.front > p {
+font-weight: bold;	
+margin-top: 40px ;
+color: #26394d;
+}
 	
 .imagen{
 	height: 150px;
@@ -232,8 +241,6 @@ footer .creado-por {
 	header .nav .column {
 		margin-bottom: 50px;
 	}
-
-
 
 }
 
