@@ -1,4 +1,13 @@
 /*
+//data.js function para ordenar alfabeticamente A-Z
+function filterAZ () {
+  let pokeInfo = POKEMON;
+  let mapeando = pokeInfo.map(nombre => nombre.name)
+  let ordenando = mapeando.sort()
+  return ordenando;
+};
+*/
+/*
 //funcion en orden de A - Z
 let pokemonsHtml = '';
 
@@ -11,44 +20,14 @@ let pokemosArray = POKEMONS.sort(function(primero, segundo){
   }
   return 0;
 });
-
-
+//
 for (let i = 0; i < pokemosArray.length; i++) {
   pokemonsHtml += getPOKEMONS(pokemosArray[i]);
 }
 const pokeData = document.getElementById('info');
 pokeData.innerHTML = pokemonsHtml;
 */
-
-
-/* 
-// DOM filtrando por alfabeto de a - Z
-import {filterAZ} from './data.js';
-const selectAZ = document.getElementById("orderABC");
-
-selectAZ.addEventListener("change", () => {
-  const choosingAZ = document.getElementById("orderABC").value;
-  //dentro de la funcion integramos el tipo seleccionado
-  const resultAZ = filterAZ(choosingAZ);
-  const printingInfo = document.getElementById("info")
-
-
-  for (let i = 0; i < resultAZ.length; i++) {
-    printingInfo.innerHTML += `${getPOKEMONS(resultAZ[i])}`;
-  }
-});
-*/
-
-/*
-//data.js function para ordenar alfabeticamente A-Z
-export function filterAZ() {
-  let pokeInfo = POKEMON;
-  let mapeando = pokeInfo.map(nombre => nombre.name)
-  let ordenando = mapeando.sort()
-  return ordenando;
-};
-*/
-
+//
 /*
 //function para ordenar Alfabeticamente al revez Z-A
 export function filterZA() {
@@ -69,22 +48,4 @@ export function filterZA() {
   return ordenando;
 };
 */
-
-/*
-export function filterType(POKEMON, type){
-  const filtering = POKEMON.filter(element => element.type){
-    let recorriendo = element.includes(type);
-    return filtering;
-};
-*/
-
-/*
-//mostrando todos los pokemones en pantalla
-let pokeData = POKEMON
-let result = "";
-
-pokeData.forEach( (element, i) => {
-  let showAll = (Object.values(POKEMON[i].name));
-  document.getElementById("info").innerHTML += showAll
-});
-*/
+//

@@ -27,7 +27,7 @@ simple de hacerlo es creando _interfaces_ y _visualizaciones_.
 
 Por lo cual este Readme, viene a explicar el proceso de desarrollo de Pokédesk, su proceso de creación y manejo de Data.  
 
-![tittle](README/INITIALDL.JFIF)
+![tittle](README/INITIALDL.png)
 
 
 ## 2.  Definición del producto 📝
@@ -112,16 +112,16 @@ y  si escogiese uno para conocer más detalles, la información se despliegue co
 Iniciamos entonces la producción de nuestros prototipos de alta Fidelidad en Photoshop, herramienta escogida para nuestro diseño visual. 
 La siguiente era nuestra idea inicial, de pantalla de inicio. 
 
-![Primer Prototipo Alta Fidelidad](README/PAF1.jfif)
+![Primer Prototipo Alta Fidelidad](README/PAF1.png)
 
 la siguiente pantalla es la pensada previamente en el prototipado inicial.
 
-![Primer Prototipo Alta Fidelidad](README/PAF2.jfif)  
+![Primer Prototipo Alta Fidelidad](README/PAF2.jpg)  
 
 Mientras que la tercera pensamos que se vería más menos así...
 
 
-![Primer Prototipo Alta Fidelidad](README/PAF3.jfif) 
+![Primer Prototipo Alta Fidelidad](README/PAF3.jpg) 
 
 
 ## 6. Testeos de usabilidad

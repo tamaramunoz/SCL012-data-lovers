@@ -12,22 +12,20 @@
         <header>
           <div class="logo">
             <img class="logoPoke" src="img/PokeDesk.png" alt="LogoPokédesk">
-            <p>Tu escritorio de bolsillo para conocer las caracteristicas de cada pokémon</p>
+            <p>Tu escritorio de bolsillo para conocer las características de cada Pokémon</p>
           </div>
 
           <form action="">
-
             <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar por nombre tu Pokemon">
-
           </form>
           
           <nav class="nav">
-            <div class="column">
-            <input class="boton" type="button" value="Todos" id="showAll">
-            </div>
+              <div class="column">
+                <input class="boton" type="button" value="Buscar" id="search-name">
+              </div>
 
             <div class="column">
-              <input class="boton" type="button" value="Buscar" id="search-name">
+              <input class="boton" type="button" value="Todos" id="showAll">
             </div>
 
             <div class="column">
@@ -35,10 +33,8 @@
                 <select class="filterType" name="type" id="filterType">
                   <option value="selection">Selecciona</option>
                   <option value="Bug">Bug</option>
-                  <option value="Dark">Dark</option>
                   <option value="Dragon">Dragon</option>
                   <option value="Electric">Electric</option>
-                  <option value="Fairy">Fairy</option>
                   <option value="Fighting">Fighting</option>
                   <option value="Fire">Fire</option>
                   <option value="Flying">Flying</option>
@@ -50,7 +46,6 @@
                   <option value="Poison">Poison</option>
                   <option value="Psychic">Psychic</option>
                   <option value="Rock">Rock</option>
-                  <option value="Steal">Steel</option>
                   <option value="Water">Water</option>
                 </select>
               </label>
@@ -61,10 +56,8 @@
                 <select class="filterWeakness" name="weakness" id="filterWeakness">
                   <option value="selection">Selecciona</option>
                   <option value="Bug">Bug</option>
-                  <option value="Dark">Dark</option>
                   <option value="Dragon">Dragon</option>
                   <option value="Electric">Electric</option>
-                  <option value="Fairy">Fairy</option>
                   <option value="Fighting">Fighting</option>
                   <option value="Fire">Fire</option>
                   <option value="Flying">Flying</option>
@@ -76,25 +69,14 @@
                   <option value="Poison">Poison</option>
                   <option value="Psychic">Psychic</option>
                   <option value="Rock">Rock</option>
-                  <option value="Steal">Steel</option>
                   <option value="Water">Water</option>
-                </select>
-              </label>
-            </div>
-
-            <div class="column">
-              <label class="labelTitle"><b>Alfabeto</b>
-                <select class="filterOrder" id="orderABC">
-                  <option value="selection">Selecciona</option>
-                  <option id="az" sortby="name" orderby="asc" value="A">A - Z</option>
                 </select>
               </label>
             </div>
           </header>
 
-
-          <section id="info">
-            <p>INFO</p>
+          <section class="info" id="info">
+            <p>Info</p>
           </section>
 
           <footer class="pie">

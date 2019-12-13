@@ -106,11 +106,12 @@ header .nav {
 	cursor: pointer;
 }
 
-.labelTitle .filterOrder {
-	border-radius: 10px;
-	background-color: #e4e4e5;
-	color: #203363;
-	cursor: pointer;
+/* ------------------------- */
+/* SECTION */
+/* ------------------------- */
+
+.info p {
+	color: #e74c3c;
 }
 
 /* ------------------------- */
@@ -150,8 +151,6 @@ footer .creado-por {
 	background: #2a4381;
 	border-radius: 20px;
 	margin: 18px;
-}
-
 	color: #fbc30e;
 	border-radius: 20px;
 	margin: 18px;
@@ -243,4 +242,3 @@ color: #26394d;
 	}
 
 }
-
