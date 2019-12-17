@@ -6,7 +6,7 @@
 // };
 import POKEMON from './data/pokemon/pokemon.js';
 
-const pokeBase = Object.values(POKEMON, info);
+const pokeBase = Object.values(POKEMON);
 
 // function para ordenar por tipo
 export function filterType(allTypes) {

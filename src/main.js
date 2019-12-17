@@ -28,7 +28,7 @@ function getPOKEMONS(POKEMONParam) {
 // mostrando pagina principal todos los pokemones por id
 let pokemonsHtml = '';
 
-for (let i = 0; i < POKEMONS.length; i++) {
+for (let i = 0; i < POKEMONS.length; i += 1) {
   pokemonsHtml += getPOKEMONS(POKEMONS[i]);
 
   const pokeData = document.getElementById('info');
@@ -39,15 +39,15 @@ for (let i = 0; i < POKEMONS.length; i++) {
 // filtrando por tipo
 const filtering = document.getElementById('filterType');
 
-filtering.addEventListener('change', function () {
+filtering.addEventListener('change', () => {
   // contendra el nombre del tipo seleccionado
   const selectingType = document.getElementById('filterType').value;
   // dentro de la funcion integramos el tipo seleccionado
   const resultType = filterType(selectingType);
   const containerInfo = document.getElementById('info');
-  containerInfo.innerHTML = "";
+  containerInfo.innerHTML = '';
 
-  for (let i = 0; i < resultType.length; i++) {
+  for (let i = 0; i < resultType.length; i += 1) {
     containerInfo.innerHTML += `${getPOKEMONS(resultType[i])}`;
   }
 });
@@ -61,9 +61,9 @@ selectingWeak.addEventListener('change', () => {
   // dentro de la funcion integramos la debilidad elegida
   const resultWeak = weakness(choosingWeak);
   const printingInfo = document.getElementById('info');
-  printingInfo.innerHTML = "";
+  printingInfo.innerHTML = '';
 
-  for (let i = 0; i < resultWeak.length; i++) {
+  for (let i = 0; i < resultWeak.length; i += 1) {
     printingInfo.innerHTML += `${getPOKEMONS(resultWeak[i])}`;
   }
 });
@@ -71,12 +71,11 @@ selectingWeak.addEventListener('change', () => {
 // filtrando al pokemon por nombre (en el buscador)
 const btnSearch = document.getElementById('search-name');
 // llamado a evento click button
-btnSearch.addEventListener('click', function () {
+btnSearch.addEventListener('click', () => {
   const pokeNames = document.getElementById('barra-busqueda').value;
   const pokeData = document.getElementById('info');
-  const findedName ='';
-  for (let i = 0; i < POKEMONS.length; i++) {
-    if (POKEMONS[i].name === pokeNames){
+  for (let i = 0; i < POKEMONS.length; i += 1) {
+    if (POKEMONS[i].name === pokeNames) {
       pokeData.innerHTML = getPOKEMONS(POKEMONS[i]);
     }
   }
