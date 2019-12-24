@@ -1,6 +1,5 @@
 import POKEMONS from './data/pokemon/pokemon.js';
-import { filterType } from './data.js';
-import { weakness } from './data.js';
+import { filterType, weakness } from './data.js';
 
 // tarjeta de pokemones
 function getPOKEMONS(POKEMONParam) {
@@ -27,10 +26,10 @@ function getPOKEMONS(POKEMONParam) {
 }
 // mostrando pagina principal todos los pokemones por id
 let pokemonsHtml = '';
-
+// recorriendo la base de datos
 for (let i = 0; i < POKEMONS.length; i += 1) {
   pokemonsHtml += getPOKEMONS(POKEMONS[i]);
-
+// imprimiendolo en el documento
   const pokeData = document.getElementById('info');
   pokeData.innerHTML = pokemonsHtml;
 }
@@ -46,7 +45,7 @@ filtering.addEventListener('change', () => {
   const resultType = filterType(selectingType);
   const containerInfo = document.getElementById('info');
   containerInfo.innerHTML = '';
-
+  // recorriendo la base de datos para que me imprima todos los pokemones que coincidan con el filtro escogido
   for (let i = 0; i < resultType.length; i += 1) {
     containerInfo.innerHTML += `${getPOKEMONS(resultType[i])}`;
   }
@@ -81,7 +80,7 @@ btnSearch.addEventListener('click', () => {
   }
 });
 
-// WORKING "TODOS" BTN
+// recargando la página con el boton "todos"
 document.getElementById('showAll').addEventListener('click', () => {
   location.reload();
 });

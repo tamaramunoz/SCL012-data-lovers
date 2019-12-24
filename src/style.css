@@ -5,7 +5,7 @@
 }
 
 body {
-	background: #e74c3c;
+	background: #e55039;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -34,7 +34,7 @@ header .logo {
 
 header .logo p {
 	font-weight: bold;
-	color: #26394d;
+	color: #34495e;
 	text-align: center;
 	font-size: 16px;
 }
@@ -70,7 +70,9 @@ header .nav {
 .boton {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color: #fbc30e;
+	
 	background-color: #2a4381;
+	border-style: none;
 	border-radius: 10px;
 	padding: 10px;
 	font-size: 16px;
@@ -119,6 +121,7 @@ header .nav {
 /* ------------------------- */
 
 footer .creado-por {
+	margin-top: 80px;
 	margin-bottom: 40px;
 	text-align: center;
 	font-size: 14px;
@@ -180,7 +183,7 @@ color: #26394d;
 	letter-spacing: 0,03em;
 	width: 230px;
 	height: 270px;
-	background: hsl(46, 89%, 54%);
+	background-image: url(img/crop.jpg);
 	position: relative;
 	transform-style: preserve-3d;
 	transition: .7s ease;
