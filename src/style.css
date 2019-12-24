@@ -5,7 +5,7 @@
 }
 
 body {
-	background: #e55039;
+	background: #9acbd6;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -70,7 +70,6 @@ header .nav {
 .boton {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color: #fbc30e;
-	
 	background-color: #2a4381;
 	border-style: none;
 	border-radius: 10px;
