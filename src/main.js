@@ -8,7 +8,7 @@ function getPOKEMONS(POKEMONParam) {
             <div class="card">
             <div class="front">
              <h4>${POKEMONParam.name}</h4>
-             <img src="${POKEMONParam.img}" alt="imagen pokemon">
+             <img class="imagen" src="${POKEMONParam.img}" alt="imagen pokemon">
              <p>${POKEMONParam.num}</p>
             </div>
            <div class="back"> 

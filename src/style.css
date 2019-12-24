@@ -5,13 +5,14 @@
 }
 
 body {
-	background: #9acbd6;
+	background: linear-gradient(-45deg, #4834d4, #686de0, #c7ecee);
+	position: relative;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
-	width: 90%;
-	max-width: 800px;
+	width: 100%;
+	/*max-width: 800px;*/
 	margin: auto;
 }
 
@@ -21,6 +22,8 @@ body {
 
 header {
 	padding: 40px 0;
+	max-width: 800px;
+	margin: auto;
 }
 
 header .logoPoke{
@@ -111,8 +114,9 @@ header .nav {
 /* SECTION */
 /* ------------------------- */
 
-.info p {
-	color: #e74c3c;
+section {
+	margin-left: 100px;
+	
 }
 
 /* ------------------------- */
@@ -125,7 +129,7 @@ footer .creado-por {
 	text-align: center;
 	font-size: 14px;
 	font-weight: bold;
-	color: #26394d;
+	color: #fbc30e;
 }
 
 /* ------------------------- */
@@ -160,11 +164,12 @@ footer .creado-por {
 }
 .front > p {
 font-weight: bold;	
-margin-top: 40px ;
+margin-top: 20px ;
 color: #26394d;
 }
 	
 .imagen{
+	margin-top: 40px;
 	height: 100px;
 	}
 	
@@ -182,7 +187,7 @@ color: #26394d;
 	letter-spacing: 0,03em;
 	width: 230px;
 	height: 270px;
-	background-image: url(img/crop.jpg);
+	background-image: url(img/fondo2.jpg);
 	position: relative;
 	transform-style: preserve-3d;
 	transition: .7s ease;
@@ -209,8 +214,8 @@ color: #26394d;
 		justify-content: center;
 		align-items: center;
 		text-align: left;
-		line-height: 30px;
-		font-size: 14px;
+		line-height: 25px;
+		font-size: 13px;
 		font-weight: bold;
 		color: #26394d;
 	
@@ -229,9 +234,16 @@ color: #26394d;
 }
 
 @media all and (max-width: 750px) {
+	header {
+		align-content: center;
+	}
+
+	header .logo p{
+		font-size: 12px;
+	}
 	header .barra-busqueda {
 		margin-bottom: 20px;
-		width: 100%;
+		width: 75%;
 	}
 
 	header .nav{
@@ -242,7 +254,12 @@ color: #26394d;
 	}
 	
 	header .nav .column {
-		margin-bottom: 50px;
+		margin-bottom: 30px;
+	}
+
+	section {
+		margin-left: 20px;
+		align-items: center;
 	}
 
 }
