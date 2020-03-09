@@ -1,5 +1,16 @@
+/* eslint-disable implicit-arrow-linebreak */
 import POKEMONS from './data/pokemon/pokemon.js';
 import { filterType, weakness } from './data.js';
+
+// // declarando a JSON desde la base que se encuentra en mi github
+// fetch('https://raw.githubusercontent.com/tamaramunoz/SCL012-data-lovers/master/src/data/pokemon/pokemon.json')
+//   .then((response) =>
+//   // convirtiendo a JSON
+//     response.json()).then((data) => {
+//     // ahora data es un objeto JS
+//     const POKEMONS = data.pokemon;
+//     // console.log(POKEMONS);
+//   }).catch((err) => (err));
 
 // tarjeta de pokemones
 function getPOKEMONS(POKEMONParam) {
@@ -25,13 +36,13 @@ function getPOKEMONS(POKEMONParam) {
      </div>`;
 }
 // mostrando pagina principal todos los pokemones por id
-let pokemonsHtml = '';
+let pokemonHtml = '';
 // recorriendo la base de datos
 for (let i = 0; i < POKEMONS.length; i += 1) {
-  pokemonsHtml += getPOKEMONS(POKEMONS[i]);
-// imprimiendolo en el documento
+  pokemonHtml += getPOKEMONS(POKEMONS[i]);
+  // imprimiendolo en el documento
   const pokeData = document.getElementById('info');
-  pokeData.innerHTML = pokemonsHtml;
+  pokeData.innerHTML = pokemonHtml;
 }
 
 
@@ -45,7 +56,8 @@ filtering.addEventListener('change', () => {
   const resultType = filterType(selectingType);
   const containerInfo = document.getElementById('info');
   containerInfo.innerHTML = '';
-  // recorriendo la base de datos para que me imprima todos los pokemones que coincidan con el filtro escogido
+  // recorriendo la base de datos para que me imprima todos los pokemones
+  // que coincidan con el filtro escogido
   for (let i = 0; i < resultType.length; i += 1) {
     containerInfo.innerHTML += `${getPOKEMONS(resultType[i])}`;
   }
